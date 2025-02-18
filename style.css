@@ -61,6 +61,85 @@ body {
   background-color: #d8fb65;
 }
 
+.highlight-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(
+    58% 71%,
+    72% 54%,
+    73% 41%,
+    69% 34%,
+    64% 34%,
+    52.5% 45%,
+    50% 43%,
+    49% 44%,
+    49% 55%,
+    53% 56%,
+    57.5% 64%,
+    57.5% 71%
+  );
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.highlight-overlay.animated {
+  animation: houseColorChange 2s infinite;
+  -webkit-animation: houseColorChange 4s infinite;
+}
+
+.highlight-overlay:hover {
+  animation: none;
+  background-color: rgba(139, 253, 39, 0.5);
+  -webkit-animation: none;
+}
+
+#panorama {
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  position: fixed;
+}
+
+.link_button {
+  position: absolute;
+  top: 2%;
+  left: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightcoral;
+  height: 50px;
+  width: 200px;
+  font-size: 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  z-index: 2;
+  animation: changeColorButton 3s infinite;
+  -webkit-animation: changeColorButton 3s infinite;
+}
+
+.link_button:hover {
+  background-color: lightgreen;
+}
+
 @keyframes buttonBounce {
   0% {
     transform: translateY(0);
@@ -82,6 +161,18 @@ body {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
+  }
+}
+
+@keyframes houseColorChange {
+  0% {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.5);
   }
 }
 

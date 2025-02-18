@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const imageContainer = document.getElementById("image-container");
   const button = document.getElementById("myButton");
+  const house = document.querySelector(".highlight-overlay");
 
   // Настройка начальной позиции кнопки (пример: 100px от правого края, 50px сверху)
   //   button.style.right = "100px";
