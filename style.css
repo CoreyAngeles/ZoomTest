@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+#container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+#image-container {
+  position: relative;
+}
+
+.image {
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.myButton {
+  position: absolute;
+  display: flex;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 60%;
+  width: auto;
+  z-index: 2;
+  background: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transform-origin: 0 0;
+  /*Важнодлякорректногомасштабирования*/
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  animation: buttonBounce 0.3s infinite;
+  -webkit-animation: buttonBounce 2s infinite;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.myButton:hover {
+  background-color: #d8fb65;
+}
+
+@keyframes buttonBounce {
+  0% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .myButton {
+    font-size: 12px;
+    padding: 5px 20px;
+  }
+}
+
+@media (max-width: 458px) {
+  .myButton {
+    font-size: 5px;
+    padding: 3px 7px;
+  }
+}
